@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom colors for beige and brown */
+    :root {
+      --beige: #f5f5dc;
+      --dark-brown: #3d2b1f;
+      --light-brown: #a67c52;
+    }
+
+    /* Custom font for logo */
+    .logo-font {
+      font-family: 'Arial', sans-serif; /* Use a trendy font, can be customized */
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    /* Logo Button Styles */
+    .logo-button {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      color: var(--beige);
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    .logo-button:hover {
+      color: var(--light-brown);
+      transform: scale(1.05);
+    }
+    .logo-button img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-[color:var(--beige)] text-gray-900 font-sans">
+
+<!-- Header & Navigation -->
+<header class="bg-[color:var(--beige)] shadow-md sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center p-6 lg:p-8">
+    <!-- Logo Button -->
+    <a href="#home" class="logo-button">
+      <img src="images/logo.jpg" alt="Fashion Logo" class="rounded-full">
+      <h1 class="logo-font text-[color:var(--dark-brown)]">ANTI-MUSE</h1>
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="menu-toggle" class="lg:hidden focus:outline-none">
+      <svg class="w-6 h-6 text-[color:var(--dark-brown)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <nav id="navbar" class="hidden lg:flex space-x-8">
+      <a href="#about" class="text-[color:var(--dark-brown)] hover:text-[color:var(--light-brown)]">About</a>
+      <a href="#gallery" class="text-[color:var(--dark-brown)] hover:text-[color:var(--light-brown)]">Gallery</a>
+      <a href="#testimonials" class="text-[color:var(--dark-brown)] hover:text-[color:var(--light-brown)]">Testimonials</a>
+      <a href="#contact" class="text-[color:var(--dark-brown)] hover:text-[color:var(--light-brown)]">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden bg-[color:var(--beige)] border-t hidden">
+    <nav class="flex flex-col space-y-4 p-6">
+      <a href="#about" class="text-[color:var(--dark-brown)] hover:text-[color:var(--light-brown)]">About</a>
+      <a href="#gallery" class="text-[color:var(--dark-brown)] hover:text-[color:var(--light-brown)]">Gallery</a>
+      <a href="#testimonials" class="text-[color:var(--dark-brown)] hover:text-[color:var(--light-brown)]">Testimonials</a>
+      <a href="#contact" class="text-[color:var(--dark-brown)] hover:text-[color:var(--light-brown)]">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Hero Section --> 
+<section class="text-[color:var(--beige)] bg-[#6f4f37] body-font">
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 order-2 md:order-1 mb-12 md:mb-0">
+      <img class="object-cover object-center rounded" alt="hero" src="images/download.jpg">
+    </div>
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center order-1 md:order-2 ml-12 md:ml-16">
+      <h1 class="title-font sm:text-5xl text-4xl mb-6 font-medium text-[color:var(--beige)]">ALL DAY EVERYDAY FASHION
+        <br class="hidden lg:inline-block">
+      </h1>
+      <p class="mb-8 text-lg leading-relaxed">Unleash your inner muse with Anti-Muse—where timeless elegance meets bold expression. Explore a curated collection of fashion that celebrates individuality, from everyday essentials to statement pieces. Redefine your style and make a statement without saying a word.
+      </p>
+      <div class="flex justify-center">
+        <button class="inline-flex text-[color:var(--beige)] bg-[color:var(--brown)] border-0 py-2 px-6 focus:outline-none hover:bg-[color:var(--beige)] hover:text-[color:var(--brown)] rounded text-lg">HELP</button>
+        <button class="ml-4 inline-flex text-[color:var(--beige)] bg-[color:var(--brown)] border-0 py-2 px-6 focus:outline-none hover:bg-[color:var(--beige)] hover:text-[color:var(--brown)] rounded text-lg">Button</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- About Section -->
+<section id="about" class="container mx-auto py-16 px-6 lg:px-12 text-center lg:text-left">
+  <div class="lg:flex lg:items-center lg:space-x-12">
+    <div class="lg:w-1/2">
+      <h2 class="text-3xl font-semibold text-[color:var(--dark-brown)]">About Us</h2>
+      <p class="mt-6 text-[color:var(--dark-brown)]">Anti-Muse is where style meets substance. Discover the latest trends and high-quality fashion that defines individuality.</p>
+    </div>
+    <div class="mt-8 lg:mt-0 lg:w-1/2">
+      <img src="images/Street style Streetwear outfit inspo men (1).jpg" alt="Fashion Model" class="rounded-lg shadow-lg">
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="container mx-auto py-16 px-6 lg:px-12 bg-[#6f4f37]">
+  <h2 class="text-3xl font-semibold text-center text-[color:var(--beige)]">Gallery</h2>
+  <div class="grid grid-cols-2 gap-6 mt-10 sm:grid-cols-3 md:grid-cols-4">
+    <img src="images/17c6e3e5-f82c-430a-9bca-4624286a5723.jpg" alt="Gallery Image 1" class="w-full h-72 rounded-lg shadow-md">
+    <img src="images/3staaacks.jpg" alt="Gallery Image 2" class="w-full h-72 rounded-lg shadow-md object-cover">
+    <img src="images/Screenshot 2024-11-12 164654.png" alt="Gallery Image 3" class="w-full h-72 rounded-lg shadow-md object-cover">
+    <img src="images/Ig_ @perryyfrempong (1).jpg" alt="Gallery Image 4" class="w-full h-72 rounded-lg shadow-md object-cover">
+    <img src="images/Outfit inspo.jpg" alt="Gallery Image 5" class="w-full h-72 rounded-lg shadow-md object-cover">
+    <img src="images/Screenshot 2024-11-12 153157.png" alt="Gallery Image 6" class="w-full h-72 rounded-lg shadow-md object-cover">
+    <img src="images/sundress.png" alt="Gallery Image 7" class="w-full h-72 rounded-lg shadow-md object-cover">
+    <img src="images/Stylish Outfit Ideas For Men Black Edition (1).jpg" alt="Gallery Image 8" class="w-full h-72 rounded-lg shadow-md object-cover">
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="bg-[color:var(--beige)] py-16 px-6 lg:px-12">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-semibold text-center text-[color:var(--dark-brown)]">What Our Clients Say</h2>
+    <div class="mt-10 space-y-8 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+      <!-- Testimonial 1 -->
+      <div class="bg-[color:var(--dark-brown)] p-8 rounded-lg shadow-md text-[color:var(--beige)] flex flex-col items-center">
+        <img src="images/PROFILE1 (1).jpg" alt="Client 1" class="w-16 h-16 rounded-full mb-4 shadow-md">
+        <p class="text-[color:var(--beige)]">"Anti-Muse has completely transformed my wardrobe! Their styles are timeless and comfortable."</p>
+        <p class="mt-6 font-semibold">- Anna S.</p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-[color:var(--dark-brown)] p-8 rounded-lg shadow-md text-[color:var(--beige)] flex flex-col items-center">
+        <img src="images/PROFILE1 (2).jpg" alt="Client 2" class="w-16 h-16 rounded-full mb-4 shadow-md">
+        <p class="text-[color:var(--beige)]">"Great quality and fantastic designs. I always get compliments when I wear their pieces."</p>
+        <p class="mt-6 font-semibold">- James K.</p>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-[color:var(--dark-brown)] p-8 rounded-lg shadow-md text-[color:var(--beige)] flex flex-col items-center">
+        <img src="images/PROFILE1 (3).jpg" alt="Client 3" class="w-16 h-16 rounded-full mb-4 shadow-md">
+        <p class="text-[color:var(--beige)]">"Absolutely love the collection! Anti-Muse is my go-to for every season."</p>
+        <p class="mt-6 font-semibold">- Mia P.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="contact" class="bg-[color:var(--dark-brown)] py-8 text-[color:var(--beige)] text-center">
+  <p>&copy; 2024 Anti-Muse. All rights reserved.</p>
+  <p>Contact us: <a href="mailto:info@anti-muse.com" class="hover:text-[color:var(--light-brown)]">info@anti-muse.com</a></p>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>
